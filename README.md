@@ -29,5 +29,5 @@ TBD
 
 ## Acknowledgments
 
-
+https://community.hortonworks.com/articles/1282/sample-hdfnifi-flow-to-push-tweets-into-solrbanana.html
 
