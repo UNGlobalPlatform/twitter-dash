@@ -64,22 +64,20 @@ Once you start the solr you can open the web url at http://hostname:8983/solr
 ## Banana
 
 Banana is a tool to create dashboards to visualize data you have stored in Solr. Commonly used with Logstash for log data. Its a fork of kibana.
-Download Banana and install it.
-Run Solr at least once to create the webapp directory:
-```
-cd $SOLR_HOME/bin/
-./solr start
-```
-Copy banana folder to $SOLR_HOME/server/solr-webapp/webapp/
-```
- cd $SOLR_HOME/server/solr-webapp/webapp
- cp -R $BANANA_HOME/src ./banana
-```
 
+Run Solr at least once to create the webapp directory
+
+Download Banana and install it.
 ```
+ cd /opt/solr/server/solr-webapp/webapp
+ sudo git clone https://github.com/lucidworks/banana
+```
+Replace the default dashboard with the Twitter dashboard
+```
+cd /opt/solr/server/solr-webapp/webapp/banana/src/app/dashboards
+sudo mv default.json default.json.orig
 wget https://raw.githubusercontent.com/abajwa-hw/ambari-nifi-service/master/demofiles/default.json
 ```
-
 Browse to http://hostname:8983/solr/banana/src/index.html
 
 ## Apache NiFi
