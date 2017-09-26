@@ -12,24 +12,45 @@ Creating an interactive dashboard for your data
 
 For this part we are going to need Solr, Banana and NiFi and we are going to create an interactive dashboard of the tweets.
 
+## Update System
+
+```
+sudo apt-get update && apt-get upgrade -y
+```
+
 ## Solr
 
 Download Solr and install it.
 
-After downloading solr, all you need to do is untar the tar file and move it to /usr/local/solr.
+### Verify Java
 
 ```
-tar xzf solr-5.2.1.tgz solr-5.2.1/bin/install_solr_service.sh –strip-components=2
-./install_solr_service.sh solr-5.2.1.tgz -i /usr/local/solr -u $user
+java -version
+```
+Veryify that Java is installed.
+
+### Install Solr
+
+```
+cd /opt
+wget http://apache.mirror1.spango.com/lucene/solr/6.2.0/solr-6.2.0.tgz
+tar xzf solr-6.2.0.tgz solr-6.2.0/bin/install_solr_service.sh --strip-components=2
+sudo bash ./install_solr_service.sh solr-6.2.0.tgz
 ```
 
-where -i is installation directory and $user is the user you are using now.
-After you perform above steps you will get the installed directory at /usr/local/solr/ and now you can start the services
+Check Solr installation
 
 ```
-mv /usr/local/solr/solr-5.2.1/* /usr/local/solr/
-./bin/solr start -c -z localhost:9983
+sudo service solr stop
+sudo service solr start
+sudo service solr status
 ```
+
+Create the Solr Collection for Tweets
+```
+sudo su - solr -c "/opt/solr/bin/solr create -c tweets -n data_driven_schema_configs"
+```
+
 Once you start the solr you can open the web url at http://hostname:8983/solr
 
 ## Banana
