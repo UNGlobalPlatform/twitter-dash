@@ -61,7 +61,7 @@ vi /opt/lucidworks-hdpsearch/solr/server/solr/configsets/data_driven_schema_conf
       <str>EEE MMM d HH:mm:ss Z yyyy</str>
 ```
 
-![Apache NiFi/Twitter Dashboard](https://github.com/UNGlobalPlatform/twitter-dash/blob/master/docs/twitter-dashboard.png?raw=true)
+![Apache NiFi/Twitter Dashboard](https://github.com/UNGlobalPlatform/twitter-dash/blob/master/docs/solr-date-config.png?raw=true)
 
 Once you start the solr you can open the web url at http://hostname:8983/solr
 
