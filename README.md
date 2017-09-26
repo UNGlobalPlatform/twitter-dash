@@ -20,7 +20,7 @@ sudo apt-get update && apt-get upgrade -y
 
 ## Solr
 
-Frist install Java.
+First install Java.
 
 ### Install Java
 
