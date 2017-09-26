@@ -12,8 +12,6 @@ Creating an interactive dashboard for your data
 
 For this part we are going to need Solr, Banana and NiFi and we are going to create an interactive dashboard of the tweets.
 
-## Installing
-
 ## Solr
 
 Download Solr and install it.
