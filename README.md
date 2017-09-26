@@ -30,4 +30,4 @@ TBD
 ## Acknowledgments
 
 https://community.hortonworks.com/articles/1282/sample-hdfnifi-flow-to-push-tweets-into-solrbanana.html
-
+https://blogs.apache.org/nifi/entry/indexing_tweets_with_nifi_and
