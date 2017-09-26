@@ -64,7 +64,8 @@ http://hostname:8983/solr
 ## Dashboard
 Use the following URL to access the dashboard.
 http://hostname:8983/solr/banana/src/index.html#/dashboard
-You will have a timeline of tweets in the dashboard. The dashboard is highly configurable, have a play.
+
+You will have a timeline of tweets in the dashboard. The dashboard is highly configurable, so have a play.
 
 ## Contributing
 
