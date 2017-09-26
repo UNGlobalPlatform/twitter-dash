@@ -72,6 +72,10 @@ cd $SOLR_HOME/bin/
 ./solr start
 ```
 Copy banana folder to $SOLR_HOME/server/solr-webapp/webapp/
+```
+ cd $SOLR_HOME/server/solr-webapp/webapp
+ cp -R $BANANA_HOME/src ./banana
+```
 
 ```
 wget https://raw.githubusercontent.com/abajwa-hw/ambari-nifi-service/master/demofiles/default.json
