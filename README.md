@@ -55,7 +55,7 @@ http://hostname:8983/solr/#/~cores/tweets
 
 Edit solrconfig.xml by adding <str>EEE MMM d HH:mm:ss Z yyyy</str> under ParseDateFieldUpdateProcessorFactory so it looks like below. This is done to allow Solr to recognise the timestamp format of tweets.
 ```
-vi /opt/lucidworks-hdpsearch/solr/server/solr/configsets/data_driven_schema_configs/conf/solrconfig.xml
+sudo nano /opt/lucidworks-hdpsearch/solr/server/solr/configsets/data_driven_schema_configs/conf/solrconfig.xml
   <processor>
     <arr name="format">
       <str>EEE MMM d HH:mm:ss Z yyyy</str>
