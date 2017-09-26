@@ -56,7 +56,7 @@ http://hostname:8983/solr/#/~cores/tweets
 
 Edit solrconfig.xml by adding <str>EEE MMM d HH:mm:ss Z yyyy</str> under ParseDateFieldUpdateProcessorFactory so it looks like below. This is done to allow Solr to recognise the timestamp format of tweets.
 ```
-sudo nano /opt/lucidworks-hdpsearch/solr/server/solr/configsets/data_driven_schema_configs/conf/solrconfig.xml
+sudo nano /opt/solr/server/configsets/_default/conf/solrconfig.xml
   <processor>
     <arr name="format">
       <str>EEE MMM d HH:mm:ss Z yyyy</str>
@@ -72,8 +72,8 @@ Run Solr at least once to create the webapp directory
 
 Download Banana and install it.
 ```
- cd /opt/solr/server/solr-webapp/webapp
- sudo git clone https://github.com/lucidworks/banana
+cd /opt/solr/server/solr-webapp/webapp
+sudo git clone https://github.com/lucidworks/banana
 ```
 Replace the default dashboard with the Twitter dashboard
 ```
@@ -93,9 +93,6 @@ Configure the PutSolrContentStream processor as follows, this will push the twee
 ![Apache NiFi/Twitter Dashboard](https://github.com/UNGlobalPlatform/twitter-dash/blob/master/docs/solrconfig1.jpeg?raw=true)
 
 Enable the flow and then check Solr.
-Use the following URL and search the Solr index.
-
-http://hostname:8983/solr
 
 ## Dashboard
 Use the following URL to access the dashboard.
