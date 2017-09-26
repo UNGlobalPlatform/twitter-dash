@@ -55,8 +55,8 @@ Now create a data flow in NiFi to send the twitter data to Solr.
 Configure the PutSolrContentStream processor as follows, this will push the tweets to Solr.
 ![Apache NiFi/Twitter Dashboard](https://github.com/UNGlobalPlatform/twitter-dash/blob/master/docs/solrconfig2.jpeg?raw=true)
 ![Apache NiFi/Twitter Dashboard](https://github.com/UNGlobalPlatform/twitter-dash/blob/master/docs/solrconfig1.jpeg?raw=true)
-Enable the flow and then check Solr.
 
+Enable the flow and then check Solr.
 Use the following URL and search the Solr index.
 
 http://hostname:8983/solr
