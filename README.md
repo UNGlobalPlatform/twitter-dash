@@ -48,7 +48,7 @@ sudo service solr status
 
 Create the Solr Collection for Tweets
 ```
-sudo su - solr -c "/opt/solr/bin/solr create -c tweets -n data_driven_schema_configs"
+bin/solr create_collection -c tweets -d data_driven_schema_configs -s 1 -rf 1
 ```
 
 Once you start the solr you can open the web url at http://hostname:8983/solr
