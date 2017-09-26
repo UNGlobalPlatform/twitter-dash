@@ -32,10 +32,12 @@ Veryify that Java is installed.
 ### Install Solr
 
 ```
-cd /opt
 sudo wget http://apache.mirror.anlx.net/lucene/solr/7.0.0/solr-7.0.0.tgz
 sudo tar xzf solr-7.0.0.tgz
 cd solr-7.0.0/
+
+sudo ./solr-7.0.0/bin/install_solr_service.sh solr-7.0.0.tgz
+
 bin/solr start -e cloud -noprompt
 bin/solr create_collection -c tweets -d _default -s 1 -rf 1
 ```
