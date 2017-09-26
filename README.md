@@ -27,10 +27,11 @@ First install Java.
 ```
 sudo apt-get update
 sudo tar apt-get install -y default-jre || sudo yum install -y java-headless
-java -version
 ```
 Veryify that Java is installed.
-
+```
+java -version
+```
 ### Install Solr Standard
 ```
 sudo wget http://apache.mirror.anlx.net/lucene/solr/7.0.0/solr-7.0.0.tgz
