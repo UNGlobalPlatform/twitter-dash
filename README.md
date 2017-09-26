@@ -2,7 +2,7 @@
 
 Twitter dashboard using Apache NiFi, Solr and Banana
 
-![Apache NiFi/Twitter Dashboard](https://github.com/UNGlobalPlatform/geomesa/blob/master/docs/geomesa-example.png?raw=true)
+![Apache NiFi/Twitter Dashboard](https://github.com/UNGlobalPlatform/twitter-dash/blob/master/docs/twitter-dashboard.png?raw=true)
 
 ## Getting Started
 
