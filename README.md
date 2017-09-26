@@ -22,40 +22,34 @@ sudo apt-get update && apt-get upgrade -y
 
 Download Solr and install it.
 
-### Verify Java
+### Install Java
 
 ```
+sudo apt-get update
+sudo tar apt-get install -y default-jre || sudo yum install -y java-headless
 java -version
 ```
 Veryify that Java is installed.
 
-### Install Solr
-
+### Install Solr Standard
+```
+sudo wget http://apache.mirror.anlx.net/lucene/solr/7.0.0/solr-7.0.0.tgz
+sudo tar xzf solr-7.0.0.tgz
+sudo ./solr-7.0.0/bin/install_solr_service.sh solr-7.0.0.tgz
+```
+### Install SolrCloud
 ```
 sudo wget http://apache.mirror.anlx.net/lucene/solr/7.0.0/solr-7.0.0.tgz
 sudo tar xzf solr-7.0.0.tgz
 cd solr-7.0.0/
-
-sudo ./solr-7.0.0/bin/install_solr_service.sh solr-7.0.0.tgz
-
 bin/solr start -e cloud -noprompt
-bin/solr create_collection -c tweets -d _default -s 1 -rf 1
 ```
-
-Check Solr installation
-
-```
-sudo service solr stop
-sudo service solr start
-sudo service solr status
-```
-
 Create the Solr Collection for Tweets
 ```
 bin/solr create_collection -c tweets -d data_driven_schema_configs -s 1 -rf 1
+sudo -u solr ./solr-7.0.0/bin/solr create_core -c tweets -d _default -s 1 -rf 1
 ```
 Edit solrconfig.xml by adding <str>EEE MMM d HH:mm:ss Z yyyy</str> underParseDateFieldUpdateProcessorFactory so it looks like below. This is done to allow Solr to recognize the timestamp format of tweets.
-
 ```
 vi /opt/lucidworks-hdpsearch/solr/server/solr/configsets/data_driven_schema_configs/conf/solrconfig.xml
   <processor>
