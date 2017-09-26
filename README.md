@@ -54,6 +54,8 @@ Check the core has been created
 
 http://hostname:8983/solr/#/~cores/tweets
 
+![Solr/Tweets Configuration](https://github.com/UNGlobalPlatform/twitter-dash/blob/master/docs/solr-config.png?raw=true)
+
 Edit solrconfig.xml by adding <str>EEE MMM d HH:mm:ss Z yyyy</str> under ParseDateFieldUpdateProcessorFactory so it looks like below. This is done to allow Solr to recognise the timestamp format of tweets.
 ```
 sudo nano /opt/solr/server/configsets/_default/conf/solrconfig.xml
@@ -89,8 +91,8 @@ Now create a data flow in NiFi to send the twitter data to Solr.
 ![Apache NiFi/Twitter Dashboard](https://github.com/UNGlobalPlatform/twitter-dash/blob/master/docs/nifi%20flow.jpeg?raw=true)
 
 Configure the PutSolrContentStream processor as follows, this will push the tweets to Solr.
-![Apache NiFi/Twitter Dashboard](https://github.com/UNGlobalPlatform/twitter-dash/blob/master/docs/solrconfig2.jpeg?raw=true)
-![Apache NiFi/Twitter Dashboard](https://github.com/UNGlobalPlatform/twitter-dash/blob/master/docs/solrconfig1.jpeg?raw=true)
+![Apache NiFi/Solr Configuration](https://github.com/UNGlobalPlatform/twitter-dash/blob/master/docs/solrconfig2.jpeg?raw=true)
+![Apache NiFi/Solr Configuration](https://github.com/UNGlobalPlatform/twitter-dash/blob/master/docs/solrconfig1.jpeg?raw=true)
 
 Enable the flow and then check Solr.
 
