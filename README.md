@@ -6,9 +6,31 @@ Twitter dashboard using Apache NiFi, Solr and Banana
 
 ## Getting Started
 
+Creating an interactive dashboard for your data
+
 ### Prerequisites
 
-### Installing
+For this part we are going to need Solr, Banana and NiFi and we are going to create an interactive dashboard of the tweets.
+
+## Installing
+
+## Solr
+
+Download Solr and install it.
+
+After downloading solr, all you need to do is untar the tar file and move it to /usr/local/solr.
+
+```
+tar xzf solr-5.2.1.tgz solr-5.2.1/bin/install_solr_service.sh –strip-components=2 ./install_solr_service.sh solr-5.2.1.tgz -i /usr/local/solr -u $user
+```
+
+where -i is installation directory and $user is the user you are using now.
+After you perform above steps you will get the installed directory at /usr/local/solr/ and now you can start the services
+
+```
+mv /usr/local/solr/solr-5.2.1/* /usr/local/solr/
+./bin/solr start -c -z localhost:9983
+```
 
 ## Deployment
 
