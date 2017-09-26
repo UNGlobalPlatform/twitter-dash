@@ -50,7 +50,14 @@ Create the Solr Collection for Tweets
 ```
 bin/solr create_collection -c tweets -d data_driven_schema_configs -s 1 -rf 1
 ```
+Edit solrconfig.xml by adding <str>EEE MMM d HH:mm:ss Z yyyy</str> underParseDateFieldUpdateProcessorFactory so it looks like below. This is done to allow Solr to recognize the timestamp format of tweets.
 
+```
+vi /opt/lucidworks-hdpsearch/solr/server/solr/configsets/data_driven_schema_configs/conf/solrconfig.xml
+  <processor>
+    <arr name="format">
+      <str>EEE MMM d HH:mm:ss Z yyyy</str>
+```
 Once you start the solr you can open the web url at http://hostname:8983/solr
 
 ## Banana
