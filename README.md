@@ -33,9 +33,11 @@ Veryify that Java is installed.
 
 ```
 cd /opt
-wget http://apache.mirror1.spango.com/lucene/solr/6.2.0/solr-6.2.0.tgz
-tar xzf solr-6.2.0.tgz solr-6.2.0/bin/install_solr_service.sh --strip-components=2
-sudo bash ./install_solr_service.sh solr-6.2.0.tgz
+sudo wget http://apache.mirror.anlx.net/lucene/solr/7.0.0/solr-7.0.0.tgz
+sudo tar xzf solr-7.0.0.tgz
+cd solr-7.0.0/
+bin/solr start -e cloud -noprompt
+bin/solr create_collection -c tweets -d _default -s 1 -rf 1
 ```
 
 Check Solr installation
@@ -70,6 +72,10 @@ cd $SOLR_HOME/bin/
 ./solr start
 ```
 Copy banana folder to $SOLR_HOME/server/solr-webapp/webapp/
+
+```
+wget https://raw.githubusercontent.com/abajwa-hw/ambari-nifi-service/master/demofiles/default.json
+```
 
 Browse to http://hostname:8983/solr/banana/src/index.html
 
