@@ -12,6 +12,12 @@ Creating an interactive dashboard for your data
 
 For this part we are going to need Solr, Banana and NiFi and we are going to create an interactive dashboard of the tweets.
 
+## Launch AWS Instance
+
+From the AWS Marketplace launch an instance using the following AMI, https://aws.amazon.com/marketplace/fulfillment?productId=7bc7936e-10a8-42c7-ab44-ce435bd949a9&ref=cns_srchrow
+
+This is the quickest way to get NiFi up and running.
+
 ## Update System
 
 ```
